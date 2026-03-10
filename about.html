@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>من نحن — سلامات</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 60%, #1D4ED8 100%);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content:'';position:absolute;inset:0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(37,99,235,.3) 0%, transparent 60%);
+    }
+    .page-hero-content { position:relative;z-index:1; }
+    .page-hero h1 { font-size:clamp(2rem,4vw,3rem);font-weight:900;color:white;margin-bottom:.75rem; }
+    .page-hero p { font-size:1.05rem;color:#CBD5E1;max-width:540px;line-height:1.8; }
+
+    .mv-grid { display:grid;grid-template-columns:1fr 1fr;gap:2rem; }
+    .mv-card {
+      padding:2rem;border-radius:var(--radius-lg);
+      border:1px solid var(--border);background:white;
+    }
+    .mv-card-icon { font-size:2.2rem;margin-bottom:1rem; }
+    .mv-card h3 { font-size:1.1rem;font-weight:800;color:var(--dark);margin-bottom:.6rem; }
+    .mv-card p { font-size:.9rem;color:var(--muted);line-height:1.8; }
+
+    .values-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem; }
+    .value-item {
+      text-align:center;padding:1.5rem;border-radius:var(--radius-lg);
+      background:var(--bg);border:1px solid var(--border);
+      transition:var(--transition);
+    }
+    .value-item:hover { border-color:var(--primary);background:var(--primary-light); }
+    .value-icon { font-size:2rem;margin-bottom:.75rem; }
+    .value-item h4 { font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:.3rem; }
+    .value-item p { font-size:.82rem;color:var(--muted); }
+
+    .team-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem; }
+    .team-card {
+      text-align:center;padding:2rem 1.5rem;
+      border-radius:var(--radius-lg);border:1px solid var(--border);
+      background:white;transition:var(--transition);
+    }
+    .team-card:hover { box-shadow:var(--shadow-lg);transform:translateY(-4px); }
+    .team-avatar {
+      width:80px;height:80px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-size:2rem;font-weight:800;color:white;
+      margin:0 auto 1rem;
+    }
+    .team-name { font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:.25rem; }
+    .team-title { font-size:.82rem;color:var(--muted); }
+
+    .story-timeline { position:relative;padding-right:2rem; }
+    .story-timeline::before {
+      content:'';position:absolute;right:0;top:0;bottom:0;
+      width:2px;background:linear-gradient(to bottom,var(--primary),var(--secondary));
+    }
+    .timeline-item { position:relative;margin-bottom:2rem; }
+    .timeline-item::before {
+      content:'';position:absolute;right:-2.4rem;top:.4rem;
+      width:12px;height:12px;border-radius:50%;background:var(--primary);
+      border:3px solid white;box-shadow:0 0 0 2px var(--primary);
+    }
+    .timeline-year { font-size:.78rem;font-weight:700;color:var(--primary);margin-bottom:.25rem; }
+    .timeline-item h4 { font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:.3rem; }
+    .timeline-item p { font-size:.86rem;color:var(--muted);line-height:1.75; }
+
+    @media(max-width:768px){
+      .mv-grid,.values-grid,.team-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="section-tag" style="background:rgba(255,255,255,.12);color:#93C5FD;border:1px solid rgba(255,255,255,.2)">🏢 من نحن</div>
+      <h1>نحن سلامات</h1>
+      <p>منصة تسويق متكاملة تساعد أصحاب المتاجر الإلكترونية على تحويل زوارهم إلى عملاء دائمين عبر قوة واتساب بيزنس.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem">
+      <div class="section-tag">🎯 رسالتنا ورؤيتنا</div>
+      <h2 class="section-title">نؤمن بقوة التواصل الشخصي</h2>
+    </div>
+    <div class="mv-grid">
+      <div class="mv-card observe">
+        <div class="mv-card-icon">🚀</div>
+        <h3>رسالتنا</h3>
+        <p>تمكين أصحاب المتاجر الإلكترونية في العالم العربي من تحقيق أقصى استفادة من زوارهم، وذلك من خلال توفير أدوات تسويق ذكية وسهلة الاستخدام عبر واتساب.</p>
+      </div>
+      <div class="mv-card observe">
+        <div class="mv-card-icon">🔭</div>
+        <h3>رؤيتنا</h3>
+        <p>أن نكون المنصة التسويقية الأولى في المنطقة العربية، ونساعد أكثر من 10,000 متجر على مضاعفة مبيعاتهم بحلول عام 2027.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section" style="background:var(--bg)">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem">
+      <div class="section-tag">💎 قيمنا</div>
+      <h2 class="section-title">المبادئ التي نؤمن بها</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-item observe">
+        <div class="value-icon">🤝</div>
+        <h4>الشراكة الحقيقية</h4>
+        <p>نجاحك هو نجاحنا — نعمل كشركاء لا كمزودي خدمة</p>
+      </div>
+      <div class="value-item observe">
+        <div class="value-icon">⚡</div>
+        <h4>البساطة والسرعة</h4>
+        <p>أدوات قوية بواجهة بسيطة تناسب الجميع</p>
+      </div>
+      <div class="value-item observe">
+        <div class="value-icon">🔒</div>
+        <h4>الخصوصية والأمان</h4>
+        <p>بيانات عملائك محمية بأعلى معايير الأمان</p>
+      </div>
+      <div class="value-item observe">
+        <div class="value-icon">📊</div>
+        <h4>القرارات المبنية على البيانات</h4>
+        <p>لا تعمل بالتخمين — كل قرار مدعوم بأرقام حقيقية</p>
+      </div>
+      <div class="value-item observe">
+        <div class="value-icon">🌱</div>
+        <h4>التطوير المستمر</h4>
+        <p>نطور منصتنا باستمرار بناءً على احتياجات عملائنا</p>
+      </div>
+      <div class="value-item observe">
+        <div class="value-icon">🌍</div>
+        <h4>التركيز على السوق العربي</h4>
+        <p>صُممنا للمتاجر العربية وفهمنا احتياجاتها تماماً</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section-sm">
+  <div class="container">
+    <div class="stats-bar observe">
+      <div class="stat-item">
+        <span class="stat-number">+500</span>
+        <div class="stat-label">متجر يثق بنا</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">2M+</span>
+        <div class="stat-label">رسالة مُرسلة</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">+43%</span>
+        <div class="stat-label">متوسط نمو المبيعات</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">5+</span>
+        <div class="stat-label">سنوات خبرة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+      <div class="observe">
+        <div class="section-tag">📖 قصتنا</div>
+        <h2 class="section-title">كيف بدأت سلامات</h2>
+        <p style="font-size:.95rem;color:var(--muted);line-height:1.9;margin-bottom:2rem">بدأت فكرة سلامات عندما لاحظ مؤسسونا معاناة أصحاب المتاجر من فقدان 70% من زوارهم دون الشراء. كان الحل أمام أعيننا — واتساب، التطبيق الذي يستخدمه الجميع يومياً.</p>
+        <a href="packages.html" class="btn btn-primary btn-lg">شاهد باقاتنا</a>
+      </div>
+      <div class="story-timeline observe">
+        <div class="timeline-item">
+          <div class="timeline-year">2020</div>
+          <h4>بداية الفكرة</h4>
+          <p>لاحظنا مشكلة السلات المتروكة في المتاجر العربية وبدأنا البحث عن حل</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <h4>الإطلاق التجريبي</h4>
+          <p>أطلقنا النسخة الأولى مع 20 متجر إلكتروني كحالات دراسية</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2022</div>
+          <h4>التوسع والنمو</h4>
+          <p>وصلنا لـ 200 متجر وأطلقنا ميزة CRM المتكاملة</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2023</div>
+          <h4>الحملات التلقائية</h4>
+          <p>أطلقنا نظام الحملات التلقائية الذكية وتجاوزنا 500 متجر</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2025</div>
+          <h4>اليوم</h4>
+          <p>أكثر من 500 متجر يثق بنا وأكثر من 2 مليون رسالة مُرسلة شهرياً</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" style="background:var(--bg)">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem">
+      <div class="section-tag">👥 فريقنا</div>
+      <h2 class="section-title">الأشخاص خلف سلامات</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card observe">
+        <div class="team-avatar" style="background:#2563EB">أ</div>
+        <div class="team-name">أحمد المطيري</div>
+        <div class="team-title">المؤسس والرئيس التنفيذي</div>
+      </div>
+      <div class="team-card observe">
+        <div class="team-avatar" style="background:#10B981">ر</div>
+        <div class="team-name">ريم الزهراني</div>
+        <div class="team-title">مديرة المنتج</div>
+      </div>
+      <div class="team-card observe">
+        <div class="team-avatar" style="background:#7C3AED">ع</div>
+        <div class="team-name">عمر السالم</div>
+        <div class="team-title">مدير التقنية</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner observe">
+      <h2>هل أنت مستعد للانضمام إلينا؟</h2>
+      <p>انضم لأكثر من 500 متجر يحقق نتائج استثنائية مع سلامات</p>
+      <div class="cta-btns">
+        <a href="packages.html" class="btn btn-white btn-lg">شاهد الباقات</a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="js/components.js"></script>
+</body>
+</html>

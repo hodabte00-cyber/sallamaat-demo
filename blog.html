@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>المدونة — سلامات</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .page-hero{background:linear-gradient(135deg,#0F172A 0%,#1E3A8A 60%,#1D4ED8 100%);padding:120px 0 80px;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(37,99,235,.3) 0%,transparent 60%);}
+    .page-hero-content{position:relative;z-index:1;}
+    .page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;color:white;margin-bottom:.75rem;}
+    .page-hero p{font-size:1.05rem;color:#CBD5E1;max-width:540px;line-height:1.8;}
+
+    .blog-layout{display:grid;grid-template-columns:1fr 300px;gap:2.5rem;}
+    .cat-filter{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+    .cat-btn{padding:.4rem 1rem;border-radius:100px;font-size:.85rem;font-weight:600;cursor:pointer;border:1.5px solid var(--border);background:white;color:var(--muted);transition:var(--transition);font-family:'Cairo',sans-serif;}
+    .cat-btn.active,.cat-btn:hover{background:var(--primary);color:white;border-color:var(--primary);}
+
+    .post-card{background:white;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition);margin-bottom:1.5rem;}
+    .post-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);}
+    .post-thumb{height:200px;object-fit:cover;width:100%;display:block;background:linear-gradient(135deg,var(--primary-light),#DBEAFE);}
+    .post-thumb-placeholder{height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,var(--primary-light),#DBEAFE);}
+    .post-body{padding:1.5rem;}
+    .post-meta{display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;flex-wrap:wrap;}
+    .post-date{font-size:.78rem;color:var(--muted);}
+    .post-title{font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:.6rem;line-height:1.4;}
+    .post-title a{text-decoration:none;color:inherit;transition:var(--transition);}
+    .post-title a:hover{color:var(--primary);}
+    .post-excerpt{font-size:.88rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;}
+    .post-footer{display:flex;align-items:center;justify-content:space-between;}
+    .read-more{font-size:.85rem;font-weight:600;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:.3rem;}
+    .read-more:hover{gap:.6rem;}
+
+    /* Sidebar */
+    .sidebar-widget{background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.5rem;}
+    .widget-title{font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:1.1rem;padding-bottom:.6rem;border-bottom:2px solid var(--primary);}
+    .recent-post{display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border);}
+    .recent-post:last-child{border-bottom:none;}
+    .recent-post-thumb{width:56px;height:56px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+    .recent-post-title{font-size:.82rem;font-weight:600;color:var(--dark);line-height:1.4;margin-bottom:.25rem;}
+    .recent-post-date{font-size:.74rem;color:var(--muted);}
+    .cat-list{list-style:none;}
+    .cat-list li{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.88rem;}
+    .cat-list li:last-child{border-bottom:none;}
+    .cat-list a{text-decoration:none;color:var(--text);transition:var(--transition);}
+    .cat-list a:hover{color:var(--primary);}
+    .cat-count{background:var(--bg);color:var(--muted);font-size:.75rem;padding:.15rem .5rem;border-radius:100px;}
+    .newsletter-form{display:flex;flex-direction:column;gap:.75rem;}
+
+    @media(max-width:900px){.blog-layout{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="section-tag" style="background:rgba(255,255,255,.12);color:#93C5FD;border:1px solid rgba(255,255,255,.2)">📝 المدونة</div>
+      <h1>مدونة سلامات</h1>
+      <p>نصائح وأدلة عملية لتنمية متجرك الإلكتروني عبر التسويق بواتساب</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- Category filter -->
+    <div class="cat-filter">
+      <button class="cat-btn active">كل المقالات</button>
+      <button class="cat-btn">تسويق رقمي</button>
+      <button class="cat-btn">واتساب ماركتينج</button>
+      <button class="cat-btn">تجارة إلكترونية</button>
+      <button class="cat-btn">إدارة العملاء</button>
+      <button class="cat-btn">نصائح وتجارب</button>
+    </div>
+
+    <div class="blog-layout">
+      <!-- Posts -->
+      <div>
+        <div class="post-card observe">
+          <div class="post-thumb-placeholder">💬</div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="badge badge-primary">واتساب ماركتينج</span>
+              <span class="post-date">15 يناير 2025</span>
+            </div>
+            <h2 class="post-title"><a href="post.html">كيف تحوّل سلات التسوق المتروكة إلى مبيعات حقيقية عبر واتساب</a></h2>
+            <p class="post-excerpt">70% من الزوار يتركون السلة قبل الشراء — تعرّف على الاستراتيجية المجربة لاسترداد هؤلاء العملاء وتحويلهم لمشترين فعليين.</p>
+            <div class="post-footer">
+              <a href="post.html" class="read-more">اقرأ المزيد ←</a>
+              <span style="font-size:.78rem;color:var(--muted)">⏱ 5 دقائق قراءة</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card observe">
+          <div class="post-thumb-placeholder">📊</div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="badge badge-green">تجارة إلكترونية</span>
+              <span class="post-date">8 يناير 2025</span>
+            </div>
+            <h2 class="post-title"><a href="post.html">10 مؤشرات أداء يجب أن يتابعها كل صاحب متجر إلكتروني</a></h2>
+            <p class="post-excerpt">لا تعمل بالتخمين — هذه المؤشرات العشرة هي البوصلة التي تحدد نجاح متجرك وتكشف الفرص المخفية لزيادة الأرباح.</p>
+            <div class="post-footer">
+              <a href="post.html" class="read-more">اقرأ المزيد ←</a>
+              <span style="font-size:.78rem;color:var(--muted)">⏱ 7 دقائق قراءة</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card observe">
+          <div class="post-thumb-placeholder">🤖</div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="badge badge-amber">تسويق رقمي</span>
+              <span class="post-date">1 يناير 2025</span>
+            </div>
+            <h2 class="post-title"><a href="post.html">الدليل الشامل للحملات التلقائية عبر واتساب بيزنس 2025</a></h2>
+            <p class="post-excerpt">اكتشف كيف تبني نظام حملات واتساب تلقائي يعمل 24/7 ويحقق نتائج قياسية بأقل جهد ممكن من فريقك.</p>
+            <div class="post-footer">
+              <a href="post.html" class="read-more">اقرأ المزيد ←</a>
+              <span style="font-size:.78rem;color:var(--muted)">⏱ 10 دقائق قراءة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div style="display:flex;gap:.5rem;justify-content:center;margin-top:1rem">
+          <button class="btn btn-primary" style="min-width:40px;padding:.5rem">1</button>
+          <button class="btn btn-outline" style="min-width:40px;padding:.5rem">2</button>
+          <button class="btn btn-outline" style="min-width:40px;padding:.5rem">3</button>
+          <button class="btn btn-outline" style="padding:.5rem 1rem">التالي →</button>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div>
+        <div class="sidebar-widget observe">
+          <div class="widget-title">🔍 بحث</div>
+          <input type="text" class="form-control" placeholder="ابحث في المدونة..."/>
+        </div>
+
+        <div class="sidebar-widget observe">
+          <div class="widget-title">📌 أحدث المقالات</div>
+          <div class="recent-post">
+            <div class="recent-post-thumb">💬</div>
+            <div>
+              <div class="recent-post-title">كيف تحوّل سلات التسوق المتروكة إلى مبيعات</div>
+              <div class="recent-post-date">15 يناير 2025</div>
+            </div>
+          </div>
+          <div class="recent-post">
+            <div class="recent-post-thumb">📊</div>
+            <div>
+              <div class="recent-post-title">10 مؤشرات أداء يجب متابعتها</div>
+              <div class="recent-post-date">8 يناير 2025</div>
+            </div>
+          </div>
+          <div class="recent-post">
+            <div class="recent-post-thumb">🤖</div>
+            <div>
+              <div class="recent-post-title">الدليل الشامل للحملات التلقائية</div>
+              <div class="recent-post-date">1 يناير 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget observe">
+          <div class="widget-title">🏷️ الفئات</div>
+          <ul class="cat-list">
+            <li><a href="#">تسويق رقمي</a><span class="cat-count">12</span></li>
+            <li><a href="#">واتساب ماركتينج</a><span class="cat-count">8</span></li>
+            <li><a href="#">تجارة إلكترونية</a><span class="cat-count">15</span></li>
+            <li><a href="#">إدارة العملاء</a><span class="cat-count">6</span></li>
+            <li><a href="#">نصائح وتجارب</a><span class="cat-count">9</span></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget observe">
+          <div class="widget-title">📧 النشرة البريدية</div>
+          <p style="font-size:.84rem;color:var(--muted);margin-bottom:1rem;line-height:1.7">اشترك ليصلك أحدث المقالات والنصائح مباشرة</p>
+          <div class="newsletter-form">
+            <input type="email" class="form-control" placeholder="بريدك الإلكتروني"/>
+            <button class="btn btn-primary" style="width:100%;justify-content:center">اشترك الآن</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="js/components.js"></script>
+<script>
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
